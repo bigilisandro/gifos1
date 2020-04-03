@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>gifOS</title>
+        <!-- Styles -->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
+        <!-- JavaScript -->
+        <script type="text/javascript" src="script/script.js">
+        </script>
+    </head>
+    <body id="body">
+        <!-- Texto de arriba / Encabezado -->
+        <p class="encabezado">
+            ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803
+        </p>
+        <div class="container">
+            <header>
+                <!-- Logo y Menú de navegación -->
+                <ul class="menu-nav">
+                    <li>
+                    <!-- Logo - Izquierda -->
+                        <a href="index.html">
+                            <img src="assets/gifOF_logo.png" alt="gifOF_logo" class="logo" id="logo">
+                            
+                        </a>  
+                    </li>    
+                    <!-- Menú - Derecha -->
+                    <li> 
+                        <a class="texto-botones2 nav-right" href="crearguifos.htmlhtml">
+                            Mis Guifos
+                        </a>
+                    </li>
+                    <li class="botones-nav texto-botones elegir-tema line-height">
+                            Elegir tema    
+                            <img src="assets/dropdown.svg" alt="dropdown">
+                        <ul class="menu-nav2">
+                            <li>
+                                <button type="button" onclick="day()" class="menu-nav-sub btn">
+                                    Sailor Day
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" onclick="night()" class="menu-nav-sub menu-nav-sub-back btn">
+                                    Sailor Night
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
+                        <li>
+                            <a href="crearguifos.html">
+                                <button class="botones-nav botones-nav-margin texto-botones nav-right">
+                                    Crear Guifos     
+                                </button>
+                            </a>
+                        </li>
+                </ul>
+            </header>
+            <main>
+                <!-- Buscador principal -->
+                <section class="buscador">
+                    <div class="buscador1">
+                        <p class="texto">
+                            Buscar
+                        </p>
+                    </div>
+                    <div class="buscador2">
+                        <input placeholder="Busca gifs, hashtags, temas, busca lo que quieras…" class="buscador3 texto3" id="userSearch">
+                            </input>
+                        <button class="botones-buscador texto2" onclick="getSearchResults(); hideResults()"><span>Buscar</span>
+                        </button>
+                    </div>
+                </section>
+                <!-- Hoy te sugerimos -->
+                <section>
+                    <div class="sugerimos">
+                        <p class="texto3">
+                            Hoy te sugerimos
+                        </p>
+                    </div>
+                    <div class="sugerencias">
+                        <div>
+                            <p class="gif-title" id="gif-sugerencias-title1">
+                            </p>
+                            <img id="gif1" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                        <div>
+                            <p class="gif-title" id="gif-sugerencias-title2">   
+                            </p>
+                            <img id="gif2" src="" alt="gif2" class="gif-sugerencias">
+                        </div>
+                        <div>
+                            <p class="gif-title" id="gif-sugerencias-title3">
+                              
+                            </p>
+                            <img id="gif3" src="" alt="gif3" class="gif-sugerencias">
+                        </div>
+                        <div>
+                            <p class="gif-title" id="gif-sugerencias-title4">
+                              
+                            </p>
+                            <img id="gif4" src="" alt="gif4" class="gif-sugerencias">
+                        </div>
+                    </div>
+                </section>
+                <!-- Tendencias -->
+                <div class="sugerimos">
+                    <p class="texto3">
+                        Tendencias
+                    </p>
+                </div>
+                <section id="tendencias">
+                    <div class="sugerencias">
+                        <div>
+                            <img id="gif5" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                        <div>
+                            <img id="gif6" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                        <div>
+                            <img id="gif7" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                        <div>
+                            <img id="gif8" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                    </div>
+                    <div class="sugerencias">
+                        <div>
+                            <img id="gif9" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                        <div>
+                            <img id="gif10" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                        <div>
+                            <img id="gif11" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                        <div>
+                            <img id="gif12" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                    </div>
+                    <div class="sugerencias">
+                        <div>
+                            <img id="gif13" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                        <div>
+                            <img id="gif14" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                        <div>
+                            <img id="gif15" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                        <div>
+                            <img id="gif16" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                    </div>
+                    <div class="sugerencias">
+                        <div>
+                            <img id="gif17" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                        <div>
+                            <img id="gif18" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                        <div>
+                            <img id="gif19" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                        <div>
+                            <img id="gif20" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                    </div>
+                    
+                </section>
+                <!-- Resultados de búsqueda -->
+                <section id="searchResults">
+                    <div class="sugerencias">
+                        <div>
+                            <img id="search" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                        <div>
+                            <img id="search2" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                        <div>
+                            <img id="search3" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                        <div>
+                            <img id="search4" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                    </div>
+                    <div class="sugerencias">
+                        <div>
+                            <img id="search5" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                        <div>
+                            <img id="search6" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                        <div>
+                            <img id="search7" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                        <div>
+                            <img id="search8" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                    </div>
+                    <div class="sugerencias">
+                        <div>
+                            <img id="search9" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                        <div>
+                            <img id="search10" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                        <div>
+                            <img id="search11" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                        <div>
+                            <img id="search12" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                    </div>
+                    <div class="sugerencias">
+                        <div>
+                            <img id="search13" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                        <div>
+                            <img id="search14" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                        <div>
+                            <img id="search15" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                        <div>
+                            <img id="search16" src="" alt="gif1" class="gif-sugerencias">
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <footer>
+            <br>
+            <br>
+            <p class="texto-botones">
+                Guifos - 2020 - Lisandro Bigi
+            </p>
+            <br>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+/* Variables */
+
+$chakra-regular:'Chakra Petch', sans-serif;
+
+/* HOVERS */
+
+.texto-botones2:hover {
+    border: 1px solid #110038;
+    border-style: dotted;
+}
+
+.texto-botones2:active {
+    color: grey;
+    border: none;
+}
+
+.botones-nav:hover, .botones-nav:active {
+    border-style: dotted;
+    background-color: #CEA1B5;
+    
+}

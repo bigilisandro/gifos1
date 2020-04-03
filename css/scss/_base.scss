@@ -1,0 +1,192 @@
+/* Código CSS Repetido - Generalizado */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: #FEF7FA;
+}
+
+.day {
+    background-color: #FEF7FA;
+}
+
+.night {
+    background-color: #433A7B;
+}
+
+/* Variables */
+
+$chakra-regular:'Chakra Petch', sans-serif;
+
+/* Container general */
+
+.container {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* Botones */
+
+.botones-nav {
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    height: 36px;
+    width: 144px;
+    border: #110038, 1px;
+}
+
+.botones-nav-margin {
+    margin-right: 16px;
+}
+
+.botones-buscador {
+    display: flex;
+    justify-content: space-around;
+    background: #E6E6E6;
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+    height: 36px;
+    width: 10%;
+    margin-top: 18px;
+}
+
+.texto-botones {
+    font-family: $chakra-regular;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+}
+
+.texto-botones2 {
+    font-family: $chakra-regular;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+    margin-top: 10px;
+}
+
+.botones-rec {
+    background: #FFF4FD;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    height: 36px;
+    width: 144px;
+}
+
+.botones-rec-color {
+    background: #F7C9F3;
+}
+
+.botones-dropdown {
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    height: 36px;
+    width: 36px;
+}
+
+.menu-nav-sub {
+    background: #FFF4FD;
+    border: 1px solid #CCA6C9;
+    box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+    width: 150px;
+    height: 36px;
+    margin-top: 10px;
+    font-family: $chakra-regular;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    line-height: 22px;
+}
+
+.menu-nav-sub-back {
+    background-color: #F0F0F0;;
+}
+
+/* Texto P */
+
+.texto {
+    font-family: $chakra-regular;
+    font-weight: 700;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+
+.texto2 {
+    background-image: url('../../assets/lupa_inactive.svg');
+    background-position: 10px;
+    background-repeat: no-repeat;
+    font-family: $chakra-regular;
+    font-size: 16px;
+    color: #B4B4B4;
+    letter-spacing: 0;
+    line-height: 22px;
+}
+
+.texto3 {
+    font-family: $chakra-regular;
+    font-size: 14px;
+    color: #110038;
+    letter-spacing: 0;
+    margin: 7px;
+    padding-left: 16px;
+}
+
+.texto-h1 {
+    font-family: $chakra-regular;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    line-height: 22px;
+    font-weight: 700;
+    margin-left: 16px;
+}
+
+.texto-recuadro {
+    font-family: $chakra-regular;
+    font-size: 14px;
+    color: #110038;
+    letter-spacing: 0;
+    line-height: 20px;
+}
+
+.texto-botones3 {
+    font-family: $chakra-regular;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+}
+
+.line-height {
+    line-height: 33px;
+}
+
+/* GIFs */
+
+.gif-title {
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    height: 35px;
+    width: 260px;
+    font-family: $chakra-regular;
+    font-weight: 700;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+
+.gif-sugerencias {
+    height: 280px;
+    width: 260px;
+}
