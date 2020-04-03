@@ -380,4 +380,8 @@ body {
   border-style: dotted;
   background-color: #CEA1B5;
 }
+
+.gif-sugerencias:hover {
+  border: 2px dotted grey;
+}
 /*# sourceMappingURL=style.css.map */

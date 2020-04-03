@@ -1,5 +1,5 @@
 
-console.log('Hola');
+
 /* JavaScript */
 
 /* API KEY */

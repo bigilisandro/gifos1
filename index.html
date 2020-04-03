@@ -31,7 +31,7 @@
                     </li>    
                     <!-- Menú - Derecha -->
                     <li> 
-                        <a class="texto-botones2 nav-right" href="crearguifos.htmlhtml">
+                        <a class="texto-botones2 nav-right" href="crearguifos.html#mis-guifos">
                             Mis Guifos
                         </a>
                     </li>
@@ -71,8 +71,8 @@
                     <div class="buscador2">
                         <input placeholder="Busca gifs, hashtags, temas, busca lo que quieras…" class="buscador3 texto3" id="userSearch">
                             </input>
-                        <button class="botones-buscador texto2" onclick="getSearchResults(); hideResults()"><span>Buscar</span>
-                        </button>
+                        <a href="#results" class="botones-buscador texto2" onclick="getSearchResults(); hideResults()"><span>Buscar </span>
+                        </a>
                     </div>
                 </section>
                 <!-- Hoy te sugerimos -->
@@ -175,7 +175,7 @@
                 <!-- Resultados de búsqueda -->
                 <section id="searchResults">
                     <div class="sugerencias">
-                        <div>
+                        <div id="results">
                             <img id="search" src="" alt="gif1" class="gif-sugerencias">
                         </div>
                         <div>

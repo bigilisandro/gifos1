@@ -10,10 +10,10 @@
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
         <!-- JavaScript -->
-        <script type="text/javascript" src="script/script.js">
+        <script type="text/javascript" src="script/upload.js">
         </script>
     </head>
-    <body>
+    <body id="body">
         <!-- Texto de arriba / Encabezado -->
         <p class="encabezado">
             ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803
@@ -31,9 +31,25 @@
                     <li>
                     <!-- Logo - Izquierda -->
                         <a href="index.html">
-                            <img src="assets/gifOF_logo.png" alt="gifOF_logo" class="logo">  
+                            <img src="assets/gifOF_logo.png" alt="gifOF_logo" class="logo" id="logo">  
                         </a>
                     </li>    
+                    <li class="botones-nav texto-botones elegir-tema line-height">
+                        Elegir tema    
+                        <img src="assets/dropdown.svg" alt="dropdown">
+                    <ul class="menu-nav2">
+                        <li>
+                            <button type="button" onclick="day()" class="menu-nav-sub btn">
+                                Sailor Day
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" onclick="night()" class="menu-nav-sub menu-nav-sub-back btn">
+                                Sailor Night
+                            </button>
+                        </li>
+                    </ul>
+                </li>
                     
                 </ul>
             </header>
@@ -85,7 +101,7 @@
                 </section>
                 <!-- Mis Guifos -->
                 <section>
-                    <div class="sugerimos">
+                    <div class="sugerimos" id="mis-guifos">
                         <p class="texto3">
                             Mis Guifos
                         </p>
