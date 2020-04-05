@@ -26,4 +26,5 @@ function day(){
     video.srcObject = stream;
     video.play()
     }
-    
+    )
+  }
