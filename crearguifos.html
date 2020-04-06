@@ -9,9 +9,10 @@
         <link rel="stylesheet" href="css/style.css">
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
+        <!-- RecordRTC -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.8/RecordRTC.js" type="text/javascript"></script>
         <!-- JavaScript -->
-        <script src="script/upload.js">
-        </script>
+        <script src="script/upload.js"></script>
     </head>
     <body id="body">
         <!-- Texto de arriba / Encabezado -->
@@ -93,10 +94,22 @@
                             <button class="botones-rec texto-botones">
                                 Cancelar
                             </button>
-                            <button class="botones-rec botones-rec-color texto-botones">
+                            <button class="botones-rec botones-rec-color texto-botones" onclick="getStreamAndRecord()">
                                 Comenzar
                             </button>
                         </div>
+                    </div>
+                    <div class="recuadro3">
+                        <div>
+                            <p class="buscador1 texto">
+                                Un chequeo antes de empezar
+                            </p>
+                        </div>
+                        <video id="video" class="video">
+                        </video>
+                        <button class="botones-rec botones-rec-color texto-botones" onclick="startRecording()">
+                            Comenzar
+                        </button>
                     </div>
                 </section>
                 <!-- Mis Guifos -->

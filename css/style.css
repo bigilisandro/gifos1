@@ -364,6 +364,24 @@ body {
   margin-right: 36px;
 }
 
+/* Screen video */
+.recuadro3 {
+  background: #E6E6E6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+  height: 386px;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 75px;
+  margin-bottom: 84px;
+}
+
+.video {
+  height: 434px;
+  width: 832px;
+}
+
 /* Variables */
 /* HOVERS */
 .texto-botones2:hover {
