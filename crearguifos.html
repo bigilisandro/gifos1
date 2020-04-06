@@ -57,7 +57,7 @@
             <main>
                 <!-- Crear Guifos - Captura de Vídeo -->
                 <section>
-                    <div class="recuadro">
+                    <div class="recuadro" id="recuadro">
                         <p class="buscador1 texto">
                             Crear Guifos
                         </p>
@@ -94,21 +94,23 @@
                             <button class="botones-rec texto-botones">
                                 Cancelar
                             </button>
-                            <button class="botones-rec botones-rec-color texto-botones" onclick="getStreamAndRecord()">
+                            <button class="botones-rec botones-rec-color texto-botones" onclick="getStreamAndRecord(); startVideo()">
                                 Comenzar
                             </button>
                         </div>
                     </div>
-                    <div class="recuadro3">
+                    <div class="recuadro3" id="recuadro3">
                         <div>
                             <p class="buscador1 texto">
                                 Un chequeo antes de empezar
                             </p>
                         </div>
-                        <video id="video" class="video">
-                        </video>
-                        <button class="botones-rec botones-rec-color texto-botones" onclick="startRecording()">
-                            Comenzar
+                        <video id="imagen" class="video"></video>
+                        <button class="botones-rec texto-botones" onclick="stopRecord()">
+                            Cancelar
+                        </button>
+                        <button class="botones-rec botones-rec-color texto-botones" onclick="getStreamAndRecord2()">
+                            Grabar
                         </button>
                     </div>
                 </section>
@@ -118,36 +120,6 @@
                         <p class="texto3">
                             Mis Guifos
                         </p>
-                    </div>
-                    <div class="sugerencias">
-                        <div>
-                            <p class="gif-title">
-                                Gif-example 
-                                <img src="assets/close.svg" alt="close">
-                            </p>
-                            <img src="assets/gif.jpg" alt="">
-                        </div>
-                        <div>
-                            <p class="gif-title">
-                                Gif-example 
-                                <img src="assets/close.svg" alt="close">
-                            </p>
-                            <img src="assets/gif.jpg" alt="">
-                        </div>
-                        <div>
-                            <p class="gif-title">
-                                Gif-example 
-                                <img src="assets/close.svg" alt="close">
-                            </p>
-                            <img src="assets/gif.jpg" alt="">
-                        </div>
-                        <div>
-                            <p class="gif-title">
-                                Gif-example 
-                                <img src="assets/close.svg" alt="close">
-                            </p>
-                            <img src="assets/gif.jpg" alt="">
-                        </div>
                     </div>
                 </section>
             </main>
@@ -160,5 +132,9 @@
             </p>
             <br>
         </footer>
+        <script>
+            var video = document.getElementById("imagen");
+            console.log(video);
+        </script>
     </body>
 </html>

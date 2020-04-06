@@ -160,6 +160,7 @@
 /* Screen video */
 
 .recuadro3 {
+    display: none;
     background: #E6E6E6;
     box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
     height: 386px;
@@ -171,6 +172,8 @@
 }
 
 .video {
-    height: 434px;
-    width: 832px;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 300px;
+    width: 80%;
 }
