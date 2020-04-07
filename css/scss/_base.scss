@@ -82,6 +82,16 @@ $chakra-regular:'Chakra Petch', sans-serif;
     width: 144px;
 }
 
+.botones-rec2 {
+    margin-right: 2%;
+    float: right;
+    background: #FFF4FD;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    height: 36px;
+    width: 144px;
+}
+
 .botones-rec-color {
     background: #F7C9F3;
 }
@@ -110,6 +120,47 @@ $chakra-regular:'Chakra Petch', sans-serif;
 
 .menu-nav-sub-back {
     background-color: #F0F0F0;;
+}
+
+.botones-grabar {
+    margin-top: 5px;
+    margin-right: 5%;
+    float: right;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    width: 20%;
+    height: 36px;
+    font-family: $chakra-regular;
+    font-size: 16px;
+}
+
+.botones-grabar-color {
+    background: #FF6161;;
+}
+
+.img-camera {
+    margin-right: 25px;
+}
+
+.timer {
+    float: left;
+    width: 15%;
+    height: 36px;
+    margin-left: 5%;
+    background-color: white;
+    margin-top: 5px;
+    border: 1px solid #979797;
+}
+
+.upload-gif {
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 10px;
+    height: 300px;
+    background-color: white;
+    border: 1px solid #979797;
 }
 
 /* Texto P */
@@ -177,7 +228,7 @@ $chakra-regular:'Chakra Petch', sans-serif;
 
 .gif-title {
     background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
-    height: 35px;
+    height: 20px;
     width: 260px;
     font-family: $chakra-regular;
     font-weight: 700;

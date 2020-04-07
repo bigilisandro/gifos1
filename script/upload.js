@@ -15,6 +15,56 @@ function night(){
 
   // FUNCIÓN VÍDEO
 
+  function captureCamera(callback) {
+    navigator.mediaDevices.getUserMedia({ video: true }).then(function(camera) {
+        callback(camera);
+    }).catch(function(error) {
+        console.error(error);
+    });
+}
+
+function stopRecordingCallback() {
+    document.querySelector('h1').innerHTML = 'Vista previa. Guifo size: ' + bytesToSize(recorder.getBlob().size);
+    image.src = URL.createObjectURL(recorder.getBlob());
+    recorder.camera.stop();
+    recorder.destroy();
+    recorder = null;
+}
+
+var recorder; // globally accessible
+
+function getStreamAndRecord() {
+    this.disabled = true;
+    captureCamera(function(camera) {
+        document.querySelector('h1').innerHTML = 'Esperando al Gif Recorder para empezar...';
+        recorder = RecordRTC(camera, {
+            type: 'gif',
+            frameRate: 1,
+            quality: 10,
+            width: 360,
+            hidden: 240,
+            onGifRecordingStarted: function() {
+                document.querySelector('h1').innerHTML = 'Capturando tu Guifo.';
+            },
+            onGifPreview: function(gifURL) {
+                image.src = gifURL;
+            }
+        });
+
+        recorder.startRecording();
+
+        // release camera on stopRecording
+        recorder.camera = camera;
+
+        document.getElementById('btn-stop-recording').disabled = false;
+    });
+};
+
+function stopRecording() {
+    this.disabled = true;
+    recorder.stopRecording(stopRecordingCallback);
+};
+/*
   function getStreamAndRecord() {
       navigator.mediaDevices.getUserMedia({
       audio: false,
@@ -26,63 +76,10 @@ function night(){
       video.srcObject = camera;
       video.play()
       }
-      )}
+      )} */
 
+     
 
-
-  
-    /* function captureCamera(callback) {
-        navigator.mediaDevices.getUserMedia({ video: true }).then(function(camera) {
-            callback(camera);
-        }).catch(function(error) {
-            console.error(error);
-        });
-    }
-    */
-    
-    function stopRecordingCallback() {
-        video.srcObject = URL.createObjectURL(recorder.getBlob());
-        recorder.camera.stop();
-        recorder.destroy();
-        recorder = null;
-    }
-    
-    var recorder; // globally accessible
-    
-    function getStreamAndRecord2() {
-        this.disabled = true;
-        getStreamAndRecord(function(camera) {
-            document.querySelector('h1').innerHTML = 'Waiting for Gif Recorder to start...';
-            recorder = RecordRTC(camera, {
-                type: 'gif',
-                frameRate: 1,
-                quality: 10,
-                width: 360,
-                hidden: 240,
-                onGifRecordingStarted: function() {
-                    document.querySelector('h1').innerHTML = 'Gif recording started.';
-                },
-                onGifPreview: function(gifURL) {
-                    image.src = gifURL;
-                },
-              
-            });
-            
-          
-    
-            recorder.startRecording();
-        
-            // release camera on stopRecording
-            recorder.camera = camera;
-    
-            document.getElementById('btn-stop-recording').disabled = false;
-        });
-    };
-    
-    function stopRecord() {
-        this.disabled = true;
-        recorder.stopRecording(stopRecordingCallback);
-    };
 /*
   let form = new FormData();
   form.append('file', recorder.getBlob(), 'myGif.gif');
@@ -94,6 +91,23 @@ function night(){
 function startVideo() {
   document.getElementById("recuadro").style.display = "none";
   document.getElementById("recuadro3").style.display = "block";
+}
+
+function startRecord() {
+    document.getElementById("recuadro4").style.display = "none";
+    document.getElementById("recuadro5").style.display = "block";
+    document.getElementById("recuadro6").style.display = "none";
+}
+
+function stopRecord() {
+    document.getElementById("recuadro5").style.display = "none";
+    document.getElementById("recuadro6").style.display = "block";
+}
+
+function subirGuifo() {
+    document.getElementById("recuadro6").style.display = "none";
+    document.getElementById("recuadro7").style.display = "block";
+    document.getElementById("imagen").style.display = "none";
 }
 
 

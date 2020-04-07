@@ -10,7 +10,7 @@
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
         <!-- RecordRTC -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.8/RecordRTC.js" type="text/javascript"></script>
+        <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
         <!-- JavaScript -->
         <script src="script/upload.js"></script>
     </head>
@@ -64,9 +64,9 @@
                         <div class="recuadro1">
                             <img src="assets/window img.png" alt="window">
                     
-                            <h1 class="texto-h1">
+                            <h2 class="texto-h1">
                                 Aquí podrás crear tus propios Guifos
-                            </h1>
+                            </h2>
                         </div>
                         <div class="recuadro2">
                             <p class="texto-recuadro">
@@ -94,24 +94,52 @@
                             <button class="botones-rec texto-botones">
                                 Cancelar
                             </button>
-                            <button class="botones-rec botones-rec-color texto-botones" onclick="getStreamAndRecord(); startVideo()">
+                            <button class="botones-rec botones-rec-color texto-botones" onclick="startVideo()">
                                 Comenzar
                             </button>
                         </div>
                     </div>
                     <div class="recuadro3" id="recuadro3">
                         <div>
-                            <p class="buscador1 texto">
+                            <h1 class="buscador1 texto">
                                 Un chequeo antes de empezar
-                            </p>
+                            </h1>
                         </div>
-                        <video id="imagen" class="video"></video>
-                        <button class="botones-rec texto-botones" onclick="stopRecord()">
+                        <img id="imagen" class="video">
+                        <div id="recuadro4">
+                        <button class="botones-grabar" id="btn-start-recording" onclick="getStreamAndRecord(); startRecord()">
+                            <img src="assets/camera.svg" alt="camera" class="img-camera">
+                            Capturar
+                        </button>
+                        </div>
+                        <div id="recuadro5">
+                            <div class="timer texto-botones">
+                                00:17:35
+                            </div>
+                            <button class="botones-grabar botones-grabar-color" id="btn-stop-recording" onclick="stopRecording(); stopRecord()">
+                                <img src="assets/recording.svg" alt="recording" class="img-camera">
+                                Listo
+                            </button>
+                        </div>
+                        <div id="recuadro6">
+                            <div class="timer texto-botones">
+                                17:00:50
+                            </div>
+                            <button class="botones-rec-color texto-botones botones-rec2" onclick="subirGuifo()">
+                                Subir Guifo
+                            </button>
+                            <button class="texto-botones botones-rec2" onclick="getStreamAndRecord(); startRecord()">
+                                Repetir Captura
+                            </button>
+                    </div>
+                    <div id="recuadro7">
+                        <div class="upload-gif">
+                            Hola
+                        </div>
+                        <button class="texto-botones botones-rec2 botones-grabar">
                             Cancelar
                         </button>
-                        <button class="botones-rec botones-rec-color texto-botones" onclick="getStreamAndRecord2()">
-                            Grabar
-                        </button>
+
                     </div>
                 </section>
                 <!-- Mis Guifos -->
@@ -133,8 +161,8 @@
             <br>
         </footer>
         <script>
-            var video = document.getElementById("imagen");
-            console.log(video);
+            var image = document.getElementById("imagen");
+            console.log(image);
         </script>
     </body>
 </html>
