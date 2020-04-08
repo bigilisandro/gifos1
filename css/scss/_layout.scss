@@ -126,6 +126,9 @@
     display: none;
 }
 
+#recuadro8 {
+    display: none;
+}
 
 /* CREAR GUIFOS */
 
@@ -191,4 +194,50 @@
     margin-right: 10%;
     height: 300px;
     width: 80%;
+}
+
+.video2 {
+    float: left;
+    margin-top: 30px;
+    width: 40%;
+    margin-left: 10%;
+    height: 191px;
+    border: 1px dotted black;
+}
+
+/* Loading video */
+
+.loading {
+    margin-top: 10px;
+    width: 10em;
+    height: 21px;
+    margin: 0 auto;
+    border: 1px solid grey;
+    background: #B4B4B4;
+}
+
+.loading-bar {
+    width: 0;
+    height: 100%;
+    background: #F7C9F3;;
+}
+
+@keyframes progreso {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.loading-bar {
+    animation: progreso 5s linear infinite;
+}
+
+/* Upload part */
+
+.recuadro9 {
+    margin-top: 30px;
+    float: right;
 }

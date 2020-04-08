@@ -92,6 +92,19 @@ $chakra-regular:'Chakra Petch', sans-serif;
     width: 144px;
 }
 
+.botones-rec3 {
+    margin-right: 20%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    float: right;
+    background: #FFF4FD;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    height: 36px;
+    width: 80%;
+
+}
+
 .botones-rec-color {
     background: #F7C9F3;
 }
@@ -125,6 +138,19 @@ $chakra-regular:'Chakra Petch', sans-serif;
 .botones-grabar {
     margin-top: 5px;
     margin-right: 5%;
+    float: right;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    width: 20%;
+    height: 36px;
+    font-family: $chakra-regular;
+    font-size: 16px;
+}
+
+.botones-grabar2 {
+    margin-top: 100px;
+    margin-right: 10%;
     float: right;
     background: #F7C9F3;
     border: 1px solid #110038;
@@ -224,6 +250,28 @@ $chakra-regular:'Chakra Petch', sans-serif;
     line-height: 33px;
 }
 
+.texto-loading {
+    font-family: $chakra-regular;
+    font-size: 12px;
+    color: rgba(17,0,56,0.64);
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 14px;
+    margin-top: 5px;
+}
+
+.underlined {
+    text-decoration: line-through;
+}
+
+.texto-a {
+    margin-top: 7px;
+}
+
+.texto-a-decoration {
+    text-decoration: none;
+}
+
 /* GIFs */
 
 .gif-title {
@@ -240,4 +288,14 @@ $chakra-regular:'Chakra Petch', sans-serif;
 .gif-sugerencias {
     height: 280px;
     width: 260px;
+}
+
+/* IMAGENES */
+
+.globe-img {
+    width: 5%;
+    margin-top: 80px;
+    margin-bottom: 5px;
+    margin-left: 47.5%;
+    margin-right: 47.5%;
 }

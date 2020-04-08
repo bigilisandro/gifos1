@@ -28,11 +28,10 @@ console.log(form.get('file'))
 
 
 function stopRecordingCallback() {
-    document.querySelector('h1').innerHTML = 'Vista previa. Guifo size: ' + bytesToSize(recorder.getBlob().size);
+    document.querySelector('h1').innerHTML = 'Vista Previa. Guifo Size: ' + bytesToSize(recorder.getBlob().size);
     image.src = URL.createObjectURL(recorder.getBlob());
-form.append('file', recorder.getBlob(), 'myGif.gif');
-console.log(form.get('file'))
-    recorder.camera.stop();
+    form.append('file', recorder.getBlob(), 'myGif.gif');
+    console.log(form.get('file'));
 }
 
 var recorder; // globally accessible
@@ -40,7 +39,7 @@ var recorder; // globally accessible
 function getStreamAndRecord() {
     this.disabled = true;
     captureCamera(function(camera) {
-        document.querySelector('h1').innerHTML = 'Esperando al Gif Recorder para empezar...';
+        document.querySelector('h1').innerHTML = 'Esperando Al Gif Recorder Para Empezar...';
         recorder = RecordRTC(camera, {
             type: 'gif',
             frameRate: 1,
@@ -48,7 +47,7 @@ function getStreamAndRecord() {
             width: 360,
             hidden: 240,
             onGifRecordingStarted: function() {
-                document.querySelector('h1').innerHTML = 'Capturando tu Guifo.';
+                document.querySelector('h1').innerHTML = 'Capturando Tu Guifo.';
             },
             onGifPreview: function(gifURL) {
                 image.src = gifURL;
@@ -76,6 +75,7 @@ function stopRecording() {
 var apiKey = "zLngW6Npv5ek7URDYXee7tp7lXqHIwxu";
 
 function uploadGif() {
+    subirGuifo();
     fetch("https://upload.giphy.com/v1/gifs?api_key=" + apiKey, {
     method: "POST",
     body: form
@@ -97,6 +97,12 @@ function uploadGif() {
 
     
                     document.getElementById("gif-subido1").src = json.data.images.original.url;
+                    document.getElementById("gif-subido2").src = json.data.images.original.url
+                    document.querySelector('h1').innerHTML = 'Guifo Subido Con Éxito.';
+                    guifoSubido();
+
+
+
             localStorage.setItem();
             localStorage.getItem()
           
@@ -132,6 +138,11 @@ function subirGuifo() {
     document.getElementById("recuadro6").style.display = "none";
     document.getElementById("recuadro7").style.display = "block";
     document.getElementById("imagen").style.display = "none";
+}
+
+function guifoSubido() {
+    document.getElementById("recuadro8").style.display = "block";
+    document.getElementById("recuadro7").style.display = "none";
 }
 
 
