@@ -69,12 +69,23 @@
                         </p>
                     </div>
                     <div class="buscador2">
-                        <input placeholder="Busca gifs, hashtags, temas, busca lo que quieras…" class="buscador3 texto3" id="userSearch"></input>
+                        <input placeholder="Busca gifs, hashtags, temas, busca lo que quieras…" class="buscador3 texto3" id="userSearch" type="search" autocomplete="off" onclick="resultsSuggestions()"></input>
                         <a href="#results" class="botones-buscador texto2 texto-a-decoration" onclick="getSearchResults(); hideResults()">
                             <p class="texto-a">
                                 Buscar
                             </p>
                         </a>
+                    </div>
+                    <div class="menu-nav3" id="menu-nav3">
+                        <button type="button" class="menu-nav-sug">
+                            Resultado de búsqueda sugerido
+                        </button>
+                        <button type="button" class="menu-nav-sug">
+                            Un resultado similar de búsqueda
+                        </button>
+                        <button type="button" class="menu-nav-sug">
+                            Y otro más
+                        </button>
                     </div>
                 </section>
                 <!-- Hoy te sugerimos -->
@@ -93,6 +104,9 @@
                                 </a>
                             </div>
                             <img id="gif1" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
+                            <button class="ver-mas" onclick="getSearchResults(pokemon)">
+                                Ver Más...
+                            </button>
                         </div>
                         <div>
                             <div class="gif-title">
@@ -102,6 +116,9 @@
                                 </a>
                             </div>
                             <img id="gif2" alt="gif2" class="gif-sugerencias" src="assets/gif-loading-image.gif">
+                            <button class="ver-mas">
+                                Ver Más...
+                            </button>
                         </div>
                         <div>
                             <div class="gif-title">
@@ -111,6 +128,9 @@
                                 </a>
                             </div>
                             <img id="gif3" alt="gif3" class="gif-sugerencias" src="assets/gif-loading-image.gif">
+                            <button class="ver-mas">
+                                Ver Más...
+                            </button>
                         </div>
                         <div>
                             <div class="gif-title">
@@ -120,6 +140,9 @@
                                 </a>
                             </div>
                             <img id="gif4" alt="gif4" class="gif-sugerencias" src="assets/gif-loading-image.gif">
+                            <button class="ver-mas">
+                                Ver Más...
+                            </button>
                         </div>
                     </div>
                 </section>
@@ -209,57 +232,73 @@
                     <div class="sugerencias">
                         <div id="results">
                             <img id="search" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
+                            <p id="gif-resultados-tags1" class="gif-tags"></p>
                         </div>
                         <div>
                             <img id="search2" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
+                            <p id="gif-resultados-tags2" class="gif-tags"></p>
                         </div>
                         <div>
                             <img id="search3" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
+                            <p id="gif-resultados-tags3" class="gif-tags"></p>
                         </div>
                         <div>
                             <img id="search4" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
+                            <p id="gif-resultados-tags4" class="gif-tags"></p>
                         </div>
                     </div>
                     <div class="sugerencias">
                         <div>
                             <img id="search5" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
+                            <p id="gif-resultados-tags5" class="gif-tags"></p>
                         </div>
                         <div>
                             <img id="search6" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
+                            <p id="gif-resultados-tags6" class="gif-tags"></p>
                         </div>
                         <div>
                             <img id="search7" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
+                            <p id="gif-resultados-tags7" class="gif-tags"></p>
                         </div>
                         <div>
                             <img id="search8" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
+                            <p id="gif-resultados-tags8" class="gif-tags"></p>
                         </div>
                     </div>
                     <div class="sugerencias">
                         <div>
                             <img id="search9" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
+                            <p id="gif-resultados-tags9" class="gif-tags"></p>
                         </div>
                         <div>
                             <img id="search10" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
+                            <p id="gif-resultados-tags10" class="gif-tags"></p>
                         </div>
                         <div>
                             <img id="search11" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
+                            <p id="gif-resultados-tags11" class="gif-tags"></p>
                         </div>
                         <div>
                             <img id="search12" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
+                            <p id="gif-resultados-tags12" class="gif-tags"></p>
                         </div>
                     </div>
                     <div class="sugerencias">
                         <div>
                             <img id="search13" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
+                            <p id="gif-resultados-tags13" class="gif-tags"></p>
                         </div>
                         <div>
                             <img id="search14" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
+                            <p id="gif-resultados-tags14" class="gif-tags"></p>
                         </div>
                         <div>
                             <img id="search15" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
+                            <p id="gif-resultados-tags15" class="gif-tags"></p>
                         </div>
                         <div>
                             <img id="search16" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
+                            <p id="gif-resultados-tags16" class="gif-tags"></p>
                         </div>
                     </div>
                 </section>

@@ -93,18 +93,33 @@ function uploadGif() {
         })
     
         .then(json => {
+
+
             console.log(json)
+                    localStorage.setItem('dataId', JSON.stringify(json));
+                    console.log(json);
+                    var arr = {};
+                    for (i = ((localStorage.length) - 1); i <localStorage.length; i++ ){
+                        arr[i]=localStorage.key(i); if(localStorage.key(i)==='danisgif' ) {
+                        arr.splice(i, 1); }
+                        }
+                        console.log(arr);
+                        
+                        arr.forEach (keyvalue => {    //para cada valor del array
+                        var x = localStorage.getItem(keyvalue);    //obtengo la data
+                        var xparsed = JSON.parse(x);              //la convierto
+                        var urlmygif = xparsed.data.images.original.url;      //obtengo la url
+                        })
 
     
-                    document.getElementById("gif-subido1").src = json.data.images.original.url;
+                    document.getElementById("gif-subido1").src = urlmygif;
                     document.getElementById("gif-subido2").src = json.data.images.original.url
                     document.querySelector('h1').innerHTML = 'Guifo Subido Con Éxito.';
                     guifoSubido();
+                    
 
 
 
-            localStorage.setItem();
-            localStorage.getItem()
           
     
     })

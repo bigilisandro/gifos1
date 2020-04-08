@@ -20,13 +20,11 @@ function night(){
   logo.src='assets/gifOF_logo_dark.png';
 }
 
+// Función para despeglar menú sugerencias
 
-/* Función para voler a la página anterior */
-
-function goBack() {
-    window.history.back();
-  }
-
+function resultsSuggestions() {
+  document.getElementById("menu-nav3").style.display = "block";
+}
 // Sugerencias
 
 
@@ -144,21 +142,37 @@ var giphyAPIrandom = '';
 
           document.getElementById("texto3").innerHTML = "Resultados para: [ " + searchValue + " ]";     
           document.getElementById("search").src = data.data[0].images.original.url;
+          document.getElementById("gif-resultados-tags1").innerHTML = data.data[0].title;
           document.getElementById("search2").src = data.data[1].images.original.url;
+          document.getElementById("gif-resultados-tags2").innerHTML = data.data[1].title;
           document.getElementById("search3").src = data.data[2].images.original.url;
+          document.getElementById("gif-resultados-tags3").innerHTML = data.data[2].title;
           document.getElementById("search4").src = data.data[3].images.original.url;
+          document.getElementById("gif-resultados-tags4").innerHTML = data.data[3].title;
           document.getElementById("search5").src = data.data[4].images.original.url;
+          document.getElementById("gif-resultados-tags5").innerHTML = data.data[4].title;
           document.getElementById("search6").src = data.data[5].images.original.url;
+          document.getElementById("gif-resultados-tags6").innerHTML = data.data[5].title;
           document.getElementById("search7").src = data.data[6].images.original.url;
+          document.getElementById("gif-resultados-tags7").innerHTML = data.data[6].title;
           document.getElementById("search8").src = data.data[7].images.original.url;
+          document.getElementById("gif-resultados-tags8").innerHTML = data.data[7].title;
           document.getElementById("search9").src = data.data[8].images.original.url;
+          document.getElementById("gif-resultados-tags9").innerHTML = data.data[8].title;
           document.getElementById("search10").src = data.data[9].images.original.url;
+          document.getElementById("gif-resultados-tags10").innerHTML = data.data[9].title;
           document.getElementById("search11").src = data.data[10].images.original.url;
+          document.getElementById("gif-resultados-tags11").innerHTML = data.data[10].title;
           document.getElementById("search12").src = data.data[11].images.original.url;
+          document.getElementById("gif-resultados-tags12").innerHTML = data.data[11].title;
           document.getElementById("search13").src = data.data[12].images.original.url;
+          document.getElementById("gif-resultados-tags13").innerHTML = data.data[12].title;
           document.getElementById("search14").src = data.data[13].images.original.url;
+          document.getElementById("gif-resultados-tags14").innerHTML = data.data[13].title;
           document.getElementById("search15").src = data.data[14].images.original.url;
+          document.getElementById("gif-resultados-tags15").innerHTML = data.data[14].title;
           document.getElementById("search16").src = data.data[15].images.original.url;
+          document.getElementById("gif-resultados-tags16").innerHTML = data.data[15].title;
 
     }
 

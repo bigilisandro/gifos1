@@ -1,5 +1,10 @@
 /* INDEX */
 
+/* Variables */
+
+$chakra-regular:'Chakra Petch', sans-serif;
+
+
 /* Header */
 
 .encabezado {
@@ -48,6 +53,28 @@
     width: 170px;
     position: relative;
     margin-top: 5px;
+}
+
+.menu-nav3 {
+    display: none;
+    position: relative;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    height: 160px;
+}
+
+.menu-nav-sug {
+    margin-top: 20px;
+    position: relative;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+    width: 80%;
+    margin-left: 30px;
+    font-family: $chakra-regular;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: start;
+    padding-left: 10px;
 }
 
 .elegir-tema {

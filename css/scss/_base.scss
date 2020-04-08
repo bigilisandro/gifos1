@@ -189,6 +189,23 @@ $chakra-regular:'Chakra Petch', sans-serif;
     border: 1px solid #979797;
 }
 
+.ver-mas {
+    display: block;
+    position: relative;
+    margin-top: -40px;
+    margin-left: 8px;
+    background: #2E32FB;
+    box-shadow: inset -2px -2px 0 0 #2124B3, inset 2px 2px 0 0 #FFFFFF;
+    height: 27px;
+    width: 75px;
+    text-align: center;
+    font-size: 12px;
+    font-family: $chakra-regular;
+    color: white;
+    font-weight: bold;
+        
+}
+
 /* Texto P */
 
 .texto {
@@ -275,7 +292,7 @@ $chakra-regular:'Chakra Petch', sans-serif;
 /* GIFs */
 
 .gif-title {
-    display: inline-block;
+    display: block;
     background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
     height: 20px;
     width: 260px;
@@ -301,16 +318,16 @@ $chakra-regular:'Chakra Petch', sans-serif;
 }
 
 .gif-tags {
-        display: none;
-        margin-top: -30px;
-        background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
-        height: 20px;
-        width: 260px;
-        text-align: center;
-        font-size: 14px;
-        font-family: $chakra-regular;
-        color: white;
-        font-weight: bold;
+    display: none;
+    margin-top: -30px;
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    height: 20px;
+    width: 260px;
+    text-align: center;
+    font-size: 14px;
+    font-family: $chakra-regular;
+    color: white;
+    font-weight: bold;
         
 }
 
