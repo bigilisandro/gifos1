@@ -23,3 +23,8 @@ $chakra-regular:'Chakra Petch', sans-serif;
 .gif-sugerencias:hover {
     border: 2px dotted grey;
 }
+
+.gif-sugerencias:hover ~ .gif-tags {
+    display: block;
+    position: relative;
+}

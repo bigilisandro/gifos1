@@ -280,20 +280,44 @@ body {
 
 /* GIFs */
 .gif-title {
+  display: inline-block;
   background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
   background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
   height: 20px;
   width: 260px;
+}
+
+.gif-title2 {
+  float: left;
   font-family: "Chakra Petch", sans-serif;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 12px;
   color: #FFFFFF;
   letter-spacing: 0;
+}
+
+.close {
+  margin-top: 3px;
+  float: right;
 }
 
 .gif-sugerencias {
   height: 280px;
   width: 260px;
+}
+
+.gif-tags {
+  display: none;
+  margin-top: -30px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  height: 20px;
+  width: 260px;
+  text-align: center;
+  font-size: 14px;
+  font-family: "Chakra Petch", sans-serif;
+  color: white;
+  font-weight: bold;
 }
 
 /* IMAGENES */
@@ -587,5 +611,10 @@ body {
 
 .gif-sugerencias:hover {
   border: 2px dotted grey;
+}
+
+.gif-sugerencias:hover ~ .gif-tags {
+  display: block;
+  position: relative;
 }
 /*# sourceMappingURL=style.css.map */
