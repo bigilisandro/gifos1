@@ -23,12 +23,16 @@ function night(){
     });
 }
 
+let form = new FormData();
+console.log(form.get('file'))
+
+
 function stopRecordingCallback() {
     document.querySelector('h1').innerHTML = 'Vista previa. Guifo size: ' + bytesToSize(recorder.getBlob().size);
     image.src = URL.createObjectURL(recorder.getBlob());
+form.append('file', recorder.getBlob(), 'myGif.gif');
+console.log(form.get('file'))
     recorder.camera.stop();
-    recorder.destroy();
-    recorder = null;
 }
 
 var recorder; // globally accessible
@@ -64,27 +68,47 @@ function stopRecording() {
     this.disabled = true;
     recorder.stopRecording(stopRecordingCallback);
 };
-/*
-  function getStreamAndRecord() {
-      navigator.mediaDevices.getUserMedia({
-      audio: false,
-      video: {
-      height: { max: 480 }
-      }
-      })
-      .then(function(camera) {
-      video.srcObject = camera;
-      video.play()
-      }
-      )} */
 
-     
+// Generando un archivo para subir (upload)
 
-/*
-  let form = new FormData();
-  form.append('file', recorder.getBlob(), 'myGif.gif');
-  console.log(form.get('file'));
-*/
+// Upload a Giphy - Upload a
+
+var apiKey = "zLngW6Npv5ek7URDYXee7tp7lXqHIwxu";
+
+function uploadGif() {
+    fetch("https://upload.giphy.com/v1/gifs?api_key=" + apiKey, {
+    method: "POST",
+    body: form
+})
+    .then(response => {
+        console.log(response.status);
+        return response.json();
+        
+    })
+    .then(data => {
+        var dataId = data.data.id;
+        fetch("https://api.giphy.com/v1/gifs/" + dataId + "?api_key=" + apiKey)
+        .then(response => {
+            return response.json();
+        })
+    
+        .then(json => {
+            console.log(json)
+
+    
+                    document.getElementById("gif-subido1").src = json.data.images.original.url;
+            localStorage.setItem();
+            localStorage.getItem()
+          
+    
+    })
+
+}
+    )}
+
+// Local Storage
+
+
 
 // Cambios en el DOM al presionar botones
 
