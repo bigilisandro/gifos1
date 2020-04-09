@@ -1,10 +1,10 @@
 
-// JAVASCRIPT
+// JAVASCRIPT - Crearguifos.html
 
 // Variables
 
 var arr = [];
-var sugerencias = document.getElementById("sugerencias2");
+var misGuifos = document.getElementById("misGuifos");
 var image = document.getElementById("imagen");
 let form = new FormData();
 var recorder; // globally accessible
@@ -24,6 +24,8 @@ function night(){
 
   // FUNCIÓN VÍDEO
 
+  // Obtener camara
+
   function captureCamera(callback) {
     navigator.mediaDevices.getUserMedia({ video: true }).then(function(camera) {
         callback(camera);
@@ -32,12 +34,17 @@ function night(){
     });
 }
 
+// Dejar de grabar callback
+
 function stopRecordingCallback() {
     document.querySelector('h1').innerHTML = 'Vista Previa. Guifo Size: ' + bytesToSize(recorder.getBlob().size);
     image.src = URL.createObjectURL(recorder.getBlob());
+    gifDescarga.href = URL.createObjectURL(recorder.getBlob()); // Para descargar Guifo
     form.append('file', recorder.getBlob(), 'myGif.gif');
     console.log(form.get('file'));
 }
+
+// Grabar
 
 function getStreamAndRecord() {
     this.disabled = true;
@@ -66,12 +73,29 @@ function getStreamAndRecord() {
     });
 };
 
+// Deja de grabar
+
 function stopRecording() {
     this.disabled = true;
     recorder.stopRecording(stopRecordingCallback);
 };
 
-// Generando un archivo para subir (upload)
+// Función para copiar enlance
+
+var copyTextareaBtn = document.getElementById("js-textareacopybtn");
+
+copyTextareaBtn.addEventListener('click', function(event) {
+  var copyTextarea = document.querySelector('.js-copytextarea');
+  copyTextarea.select();
+
+  try {
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Copying text command was ' + msg);
+  } catch (err) {
+    console.log('Oops, unable to copy');
+  }
+});
 
 // Upload a Giphy - Upload a
 
@@ -94,6 +118,8 @@ function uploadGif() {
         })
     
         .then(json => {
+            console.log(json);
+
 
 
             console.log(json)
@@ -107,16 +133,22 @@ function uploadGif() {
 
 
                 const divCajas = document.createElement("div");
-                divCajas.classList.add("gif-sugerencias");
-                sugerencias.appendChild(divCajas);
+                divCajas.classList.add("gifs-container");
+                misGuifos.appendChild(divCajas);
 
                 const gifSubido = document.createElement("img");
-                gifSubido.classList.add("clase-imagen");
+                gifSubido.classList.add("gif-sugerencias");
                 divCajas.appendChild(gifSubido);
 
                 gifSubido.src = urlmygif;
+                document.getElementById("gif-subido2").src = urlmygif;
+                var copyTextarea = document.querySelector('.js-copytextarea');
+                copyTextarea.value = urlmygif;
+                console.log(copyTextarea);
+               
+
                 })
-        
+
                     document.querySelector('h1').innerHTML = 'Guifo Subido Con Éxito.';
                     guifoSubido();    
     
@@ -124,7 +156,7 @@ function uploadGif() {
 
 }
 
-    
+// LOCAL STORAGE
     
     function addToLocalStorage() {
         for (i = 0; i <localStorage.length; i++ ) {
@@ -140,18 +172,18 @@ function uploadGif() {
 
 
             const divCajas = document.createElement("div");
-            divCajas.classList.add("gif-sugerencias");
-            sugerencias.appendChild(divCajas);
+            divCajas.classList.add("gifs-container");
+            misGuifos.appendChild(divCajas);
 
             const gifSubido = document.createElement("img");
-            gifSubido.classList.add("clase-imagen");
+            gifSubido.classList.add("gif-sugerencias");
             divCajas.appendChild(gifSubido);
 
             gifSubido.src = urlmygif;
             })
         }
 
-addToLocalStorage();
+addToLocalStorage(); // Ejecución de la función
 
 // Cambios en el DOM al presionar botones
 

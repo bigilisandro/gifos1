@@ -36,7 +36,7 @@
                         </a>
                     </li>
                     <li class="botones-nav texto-botones elegir-tema line-height">
-                            Elegir tema    
+                            Elegir tema
                             <img src="assets/dropdown.svg" alt="dropdown">
                         <ul class="menu-nav2">
                             <li>
@@ -69,16 +69,18 @@
                         </p>
                     </div>
                     <div class="buscador2">
-                        <input placeholder="Busca gifs, hashtags, temas, busca lo que quieras…" class="buscador3 texto3" id="userSearch" type="search" autocomplete="off" onclick="resultsSuggestions()"></input>
+                        <input placeholder="Busca gifs, hashtags, temas, busca lo que quieras…" class="buscador3 texto3" id="userSearch" type="search" autocomplete="off" onclick="resultsSuggestions()">
+                        </input>
                         <a href="#results" class="botones-buscador texto2 texto-a-decoration" onclick="getSearchResults(); hideResults()">
+                            <img src="assets/lupa_inactive.svg" alt="lupa_inactive">
                             <p class="texto-a">
                                 Buscar
                             </p>
                         </a>
                     </div>
                     <div class="menu-nav3" id="menu-nav3">
-                        <button type="button" class="menu-nav-sug">
-                            Resultado de búsqueda sugerido
+                        <button type="button" class="menu-nav-sug" id="busqueda1">
+                            leon
                         </button>
                         <button type="button" class="menu-nav-sug">
                             Un resultado similar de búsqueda
@@ -91,11 +93,11 @@
                 <!-- Hoy te sugerimos -->
                 <section>
                     <div class="sugerimos">
-                        <h2 class="texto3">
+                        <h2 class="texto3 margin-bottom">
                             Hoy te sugerimos
                         </h2>
                     </div>
-                    <div class="sugerencias">
+                    <div id="misGuifos3" class="gifs-big-container">
                         <div>
                             <div class="gif-title">
                                 <p id="gif-sugerencias-title1" class="gif-title2"></p>
@@ -104,7 +106,7 @@
                                 </a>
                             </div>
                             <img id="gif1" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <button class="ver-mas" onclick="getSearchResults(pokemon)">
+                            <button class="ver-mas">
                                 Ver Más...
                             </button>
                         </div>
@@ -153,153 +155,12 @@
                     </h2>
                 </div>
                 <section id="tendencias">
-                    <div class="sugerencias">
-                        <div>
-                            <img id="gif5" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-sugerencias-tags1" class="gif-tags"></p>
-                        </div>
-                        <div>
-                            <img id="gif6" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-sugerencias-tags2" class="gif-tags"></p>
-                        </div>
-                        <div>
-                            <img id="gif7" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-sugerencias-tags3" class="gif-tags"></p>
-                        </div>
-                        <div>
-                            <img id="gif8" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-sugerencias-tags4" class="gif-tags"></p>
-                        </div>
+                    <div id="misGuifos2" class="gifs-big-container">
                     </div>
-                    <div class="sugerencias">
-                        <div>
-                            <img id="gif9" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-sugerencias-tags5" class="gif-tags"></p>
-                        </div>
-                        <div>
-                            <img id="gif10" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-sugerencias-tags6" class="gif-tags"></p>
-                        </div>
-                        <div>
-                            <img id="gif11" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-sugerencias-tags7" class="gif-tags"></p>
-                        </div>
-                        <div>
-                            <img id="gif12" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-sugerencias-tags8" class="gif-tags"></p>
-                        </div>
-                    </div>
-                    <div class="sugerencias">
-                        <div>
-                            <img id="gif13" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-sugerencias-tags9" class="gif-tags"></p>
-                        </div>
-                        <div>
-                            <img id="gif14" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-sugerencias-tags10" class="gif-tags"></p>
-                        </div>
-                        <div>
-                            <img id="gif15" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-sugerencias-tags11" class="gif-tags"></p>
-                        </div>
-                        <div>
-                            <img id="gif16" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-sugerencias-tags12" class="gif-tags"></p>
-                        </div>
-                    </div>
-                    <div class="sugerencias">
-                        <div>
-                            <img id="gif17" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-sugerencias-tags13" class="gif-tags"></p>
-                        </div>
-                        <div>
-                            <img id="gif18" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-sugerencias-tags14" class="gif-tags"></p>
-                        </div>
-                        <div>
-                            <img id="gif19" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-sugerencias-tags15" class="gif-tags"></p>
-                        </div>
-                        <div>
-                            <img id="gif20" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-sugerencias-tags16" class="gif-tags"></p>
-                        </div>
-                    </div>
-                    
                 </section>
                 <!-- Resultados de búsqueda -->
                 <section id="searchResults">
-                    <div class="sugerencias">
-                        <div id="results">
-                            <img id="search" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-resultados-tags1" class="gif-tags"></p>
-                        </div>
-                        <div>
-                            <img id="search2" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-resultados-tags2" class="gif-tags"></p>
-                        </div>
-                        <div>
-                            <img id="search3" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-resultados-tags3" class="gif-tags"></p>
-                        </div>
-                        <div>
-                            <img id="search4" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-resultados-tags4" class="gif-tags"></p>
-                        </div>
-                    </div>
-                    <div class="sugerencias">
-                        <div>
-                            <img id="search5" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-resultados-tags5" class="gif-tags"></p>
-                        </div>
-                        <div>
-                            <img id="search6" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-resultados-tags6" class="gif-tags"></p>
-                        </div>
-                        <div>
-                            <img id="search7" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-resultados-tags7" class="gif-tags"></p>
-                        </div>
-                        <div>
-                            <img id="search8" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-resultados-tags8" class="gif-tags"></p>
-                        </div>
-                    </div>
-                    <div class="sugerencias">
-                        <div>
-                            <img id="search9" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-resultados-tags9" class="gif-tags"></p>
-                        </div>
-                        <div>
-                            <img id="search10" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-resultados-tags10" class="gif-tags"></p>
-                        </div>
-                        <div>
-                            <img id="search11" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-resultados-tags11" class="gif-tags"></p>
-                        </div>
-                        <div>
-                            <img id="search12" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-resultados-tags12" class="gif-tags"></p>
-                        </div>
-                    </div>
-                    <div class="sugerencias">
-                        <div>
-                            <img id="search13" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-resultados-tags13" class="gif-tags"></p>
-                        </div>
-                        <div>
-                            <img id="search14" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-resultados-tags14" class="gif-tags"></p>
-                        </div>
-                        <div>
-                            <img id="search15" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-resultados-tags15" class="gif-tags"></p>
-                        </div>
-                        <div>
-                            <img id="search16" alt="gif1" class="gif-sugerencias" src="assets/gif-loading-image.gif">
-                            <p id="gif-resultados-tags16" class="gif-tags"></p>
-                        </div>
+                    <div id="misGuifos" class="gifs-big-container">
                     </div>
                 </section>
             </main>

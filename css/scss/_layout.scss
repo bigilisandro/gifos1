@@ -127,6 +127,7 @@ $chakra-regular:'Chakra Petch', sans-serif;
     background: #FFFAFE;
     border: 1px solid #E6BBE2;
     box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+    margin-bottom: 10px;
 }
 
 .sugerencias {
@@ -134,6 +135,18 @@ $chakra-regular:'Chakra Petch', sans-serif;
     display: flex;
     justify-content: space-around;
 }
+
+.gifs-big-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.gifs-container {
+    margin: 15px;
+}
+
+
 
 /* Ocultos */
 
@@ -157,6 +170,9 @@ $chakra-regular:'Chakra Petch', sans-serif;
     display: none;
 }
 
+.js-copytextarea {
+    opacity: 0;
+}
 /* CREAR GUIFOS */
 
 /* Captura de vídeo */
@@ -261,6 +277,7 @@ $chakra-regular:'Chakra Petch', sans-serif;
 .loading-bar {
     animation: progreso 5s linear infinite;
 }
+
 
 /* Upload part */
 

@@ -223,7 +223,6 @@ body {
 }
 
 .texto2 {
-  background-image: url("../../assets/lupa_inactive.svg");
   background-position: 10px;
   background-repeat: no-repeat;
   font-family: "Chakra Petch", sans-serif;
@@ -289,6 +288,7 @@ body {
 
 .texto-a {
   margin-top: 7px;
+  margin-right: 15px;
 }
 
 .texto-a-decoration {
@@ -476,6 +476,7 @@ body {
   border: 1px solid #E6BBE2;
   -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
           box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+  margin-bottom: 10px;
 }
 
 .sugerencias {
@@ -485,6 +486,20 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.gifs-big-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.gifs-container {
+  margin: 15px;
 }
 
 /* Ocultos */
@@ -506,6 +521,10 @@ body {
 
 #recuadro8 {
   display: none;
+}
+
+.js-copytextarea {
+  opacity: 0;
 }
 
 /* CREAR GUIFOS */
