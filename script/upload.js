@@ -1,6 +1,15 @@
 
 // JAVASCRIPT
 
+// Variables
+
+var arr = [];
+var sugerencias = document.getElementById("sugerencias2");
+var image = document.getElementById("imagen");
+let form = new FormData();
+var recorder; // globally accessible
+var apiKey = "zLngW6Npv5ek7URDYXee7tp7lXqHIwxu";
+
 // Cambiar tema light - dark mode 
 
 function day(){
@@ -23,18 +32,12 @@ function night(){
     });
 }
 
-let form = new FormData();
-console.log(form.get('file'))
-
-
 function stopRecordingCallback() {
     document.querySelector('h1').innerHTML = 'Vista Previa. Guifo Size: ' + bytesToSize(recorder.getBlob().size);
     image.src = URL.createObjectURL(recorder.getBlob());
     form.append('file', recorder.getBlob(), 'myGif.gif');
     console.log(form.get('file'));
 }
-
-var recorder; // globally accessible
 
 function getStreamAndRecord() {
     this.disabled = true;
@@ -72,8 +75,6 @@ function stopRecording() {
 
 // Upload a Giphy - Upload a
 
-var apiKey = "zLngW6Npv5ek7URDYXee7tp7lXqHIwxu";
-
 function uploadGif() {
     subirGuifo();
     fetch("https://upload.giphy.com/v1/gifs?api_key=" + apiKey, {
@@ -96,38 +97,65 @@ function uploadGif() {
 
 
             console.log(json)
-                    localStorage.setItem('dataId', JSON.stringify(json));
-                    console.log(json);
-                    var arr = {};
-                    for (i = ((localStorage.length) - 1); i <localStorage.length; i++ ){
-                        arr[i]=localStorage.key(i); if(localStorage.key(i)==='danisgif' ) {
-                        arr.splice(i, 1); }
-                        }
-                        console.log(arr);
-                        
-                        arr.forEach (keyvalue => {    //para cada valor del array
-                        var x = localStorage.getItem(keyvalue);    //obtengo la data
-                        var xparsed = JSON.parse(x);              //la convierto
-                        var urlmygif = xparsed.data.images.original.url;      //obtengo la url
-                        })
+            localStorage.setItem(data.data.id, JSON.stringify(json));
 
-    
-                    document.getElementById("gif-subido1").src = urlmygif;
-                    document.getElementById("gif-subido2").src = json.data.images.original.url
-                    document.querySelector('h1').innerHTML = 'Guifo Subido Con Éxito.';
-                    guifoSubido();
                     
+            var y = localStorage.getItem(dataId);    //obtengo la data
+                var yparsed = JSON.parse(y);              //la convierto
+                var urlmygif = yparsed.data.images.original.url;      //obtengo la url
+                console.log(urlmygif);
 
 
+                const divCajas = document.createElement("div");
+                divCajas.classList.add("gif-sugerencias");
+                sugerencias.appendChild(divCajas);
 
-          
+                const gifSubido = document.createElement("img");
+                gifSubido.classList.add("clase-imagen");
+                divCajas.appendChild(gifSubido);
+
+                gifSubido.src = urlmygif;
+                })
+        
+                    document.querySelector('h1').innerHTML = 'Guifo Subido Con Éxito.';
+                    guifoSubido();    
     
     })
 
 }
-    )}
 
-// Local Storage
+    
+    
+    function addToLocalStorage() {
+        for (i = 0; i <localStorage.length; i++ ) {
+            arr[i]=localStorage.key(i);
+            }
+            console.log(arr);
+        
+            arr.forEach(keyvalue=> {    //para cada valor del array
+            var x = localStorage.getItem(keyvalue);    //obtengo la data
+            var xparsed = JSON.parse(x);              //la convierto
+            var urlmygif = xparsed.data.images.original.url;      //obtengo la url
+            console.log(urlmygif);
+
+
+            const divCajas = document.createElement("div");
+            divCajas.classList.add("gif-sugerencias");
+            sugerencias.appendChild(divCajas);
+
+            const gifSubido = document.createElement("img");
+            gifSubido.classList.add("clase-imagen");
+            divCajas.appendChild(gifSubido);
+
+            gifSubido.src = urlmygif;
+            })
+        }
+
+addToLocalStorage();
+
+       
+
+
 
 
 
