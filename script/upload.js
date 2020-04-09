@@ -153,12 +153,6 @@ function uploadGif() {
 
 addToLocalStorage();
 
-       
-
-
-
-
-
 // Cambios en el DOM al presionar botones
 
 function startVideo() {
