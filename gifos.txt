@@ -1,0 +1,9 @@
+LISANDRO BIGI - gifOS
+
+URL PUBLICA:
+
+https://bigilisandro.github.io/gifos1/
+
+REPOSITORIO EN GIT: 
+
+https://github.com/bigilisandro/gifos1

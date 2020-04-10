@@ -8,7 +8,7 @@
         <!-- Styles -->
         <link rel="stylesheet" href="css/style.css">
         <!-- For Light / Dark mode -->
-        <link rel="stylesheet" href="" id="themeCss">
+        <link rel="stylesheet" id="themeCss">
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
          <!-- Logo Pestaña -->
@@ -69,8 +69,7 @@
                         </p>
                     </div>
                     <div class="buscador2">
-                        <input placeholder="Busca gifs, hashtags, temas, busca lo que quieras…" class="buscador3 texto3" id="userSearch" type="search" autocomplete="off" onclick="resultsSuggestions()">
-                        </input>
+                        <input placeholder="Busca gifs, hashtags, temas, busca lo que quieras…" class="buscador3 texto3" id="userSearch" type="search" autocomplete="off" onclick="resultsSuggestions()"></input>
                         <a href="#results" class="botones-buscador texto2 texto-a-decoration" onclick="getSearchResults(); hideResults()">
                             <img src="assets/lupa_inactive.svg" alt="lupa_inactive">
                             <p class="texto-a texto-a-mobile">
@@ -79,10 +78,10 @@
                         </a>
                     </div>
                     <div class="menu-nav3" id="menu-nav3">
-                        <button type="button" class="menu-nav-sug" id="busqueda1" onclick="getSearchResultsSuggestionsNumberOne(); hideResults()">
+                        <button type="button" class="menu-nav-sug" onclick="getSearchResultsSuggestionsNumberOne(); hideResults()">
                             Memes
                         </button>
-                        <button type="button" class="menu-nav-sug" id="busqueda1" onclick="getSearchResultsSuggestionsNumberTwo(); hideResults()">
+                        <button type="button" class="menu-nav-sug" onclick="getSearchResultsSuggestionsNumberTwo(); hideResults()">
                             Coding
                         </button>
                         <button type="button" class="menu-nav-sug" onclick="getSearchResultsSuggestionsNumberThree(); hideResults()">
@@ -175,5 +174,5 @@
         </footer>
     </body>
     <!-- JavaScript -->
-    <script src="script/script.js"></script>
+<script src="script/script.js"></script>
 </html>
