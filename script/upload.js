@@ -3,9 +3,6 @@
 
 // Variables
 
-localStorage.clear();
-
-
 var arr = [];
 var misGuifos = document.getElementById("misGuifos");
 var image = document.getElementById("imagen");
