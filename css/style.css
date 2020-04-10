@@ -11,14 +11,6 @@ body {
   background-color: #FEF7FA;
 }
 
-.day {
-  background-color: #FEF7FA;
-}
-
-.night {
-  background-color: #433A7B;
-}
-
 /* Variables */
 /* Container general */
 .container {
@@ -81,7 +73,7 @@ body {
   -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
           box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
   height: 36px;
-  width: 144px;
+  width: 50%;
 }
 
 .botones-rec2 {
@@ -572,8 +564,8 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-left: 250px;
-  margin-right: 36px;
+  margin-left: 60%;
+  margin-right: 10%;
 }
 
 /* Screen video */
@@ -642,9 +634,25 @@ body {
   }
 }
 
-.loading-bar {
+.loading-bar, .loading-bar2 {
   -webkit-animation: progreso 5s linear infinite;
           animation: progreso 5s linear infinite;
+}
+
+.loading2 {
+  margin-left: 10%;
+  display: inline-block;
+  margin-top: 10px;
+  width: 10em;
+  height: 21px;
+  border: 1px solid grey;
+  background: #B4B4B4;
+}
+
+.loading-bar2 {
+  width: 0;
+  height: 100%;
+  background: #F7C9F3;
 }
 
 /* Upload part */
@@ -681,5 +689,58 @@ body {
 
 .ver-mas:hover {
   border: 2px solid #110038;
+}
+
+@media only screen and (max-width: 768px) {
+  .encabezado {
+    height: 40px;
+    text-align: center;
+  }
+  .buscador {
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+  .texto-a-mobile {
+    display: none;
+  }
+  .recuadro {
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    height: 450px;
+  }
+  .botones-recuadro {
+    display: inline-block;
+  }
+  .botones-rec {
+    width: 90%;
+  }
+  .botones-grabar {
+    width: 60%;
+  }
+  .timer {
+    display: none;
+  }
+  .loading2 {
+    display: none;
+  }
+  .recuadro3 {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .texto-h1 {
+    display: none;
+  }
+  .botones-rec3 {
+    margin-right: 5%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    float: right;
+    height: 55px;
+    width: 35%;
+  }
+  .botones-grabar2 {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

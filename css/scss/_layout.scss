@@ -211,8 +211,8 @@ $chakra-regular:'Chakra Petch', sans-serif;
 .botones-recuadro {
     display: flex;
     justify-content: space-between;
-    margin-left: 250px;
-    margin-right: 36px;
+    margin-left: 60%;
+    margin-right: 10%;
 
 }
 
@@ -274,10 +274,25 @@ $chakra-regular:'Chakra Petch', sans-serif;
     }
 }
 
-.loading-bar {
+.loading-bar, .loading-bar2 {
     animation: progreso 5s linear infinite;
 }
 
+.loading2 {
+    margin-left: 10%;
+    display: inline-block;
+    margin-top: 10px;
+    width: 10em;
+    height: 21px;
+    border: 1px solid grey;
+    background: #B4B4B4;
+}
+
+.loading-bar2 {
+    width: 0;
+    height: 100%;
+    background: #F7C9F3;;
+}
 
 /* Upload part */
 

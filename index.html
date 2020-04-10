@@ -7,6 +7,8 @@
         <title>gifOS</title>
         <!-- Styles -->
         <link rel="stylesheet" href="css/style.css">
+        <!-- For Light / Dark mode -->
+        <link rel="stylesheet" href="" id="themeCss">
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
         <!-- JavaScript -->
@@ -26,11 +28,10 @@
                     <!-- Logo - Izquierda -->
                         <a href="index.html">
                             <img src="assets/gifOF_logo.png" alt="gifOF_logo" class="logo" id="logo">
-                            
                         </a>  
                     </li>    
                     <!-- Menú - Derecha -->
-                    <li> 
+                    <li class="right-items"> 
                         <a class="texto-botones2 nav-right" href="crearguifos.html#mis-guifos">
                             Mis Guifos
                         </a>
@@ -57,7 +58,7 @@
                                     Crear Guifos
                                 </p>     
                             </a>
-                        </li>
+                    </li>
                 </ul>
             </header>
             <main>
@@ -73,20 +74,20 @@
                         </input>
                         <a href="#results" class="botones-buscador texto2 texto-a-decoration" onclick="getSearchResults(); hideResults()">
                             <img src="assets/lupa_inactive.svg" alt="lupa_inactive">
-                            <p class="texto-a">
+                            <p class="texto-a texto-a-mobile">
                                 Buscar
                             </p>
                         </a>
                     </div>
                     <div class="menu-nav3" id="menu-nav3">
-                        <button type="button" class="menu-nav-sug" id="busqueda1">
-                            leon
+                        <button type="button" class="menu-nav-sug" id="busqueda1" onclick="getSearchResultsSuggestionsNumberOne(); hideResults()">
+                            Memes
                         </button>
-                        <button type="button" class="menu-nav-sug">
-                            Un resultado similar de búsqueda
+                        <button type="button" class="menu-nav-sug" id="busqueda1" onclick="getSearchResultsSuggestionsNumberTwo(); hideResults()">
+                            Coding
                         </button>
-                        <button type="button" class="menu-nav-sug">
-                            Y otro más
+                        <button type="button" class="menu-nav-sug" onclick="getSearchResultsSuggestionsNumberThree(); hideResults()">
+                            Tomb Raider
                         </button>
                     </div>
                 </section>

@@ -10,13 +10,8 @@ body {
     background-color: #FEF7FA;
 }
 
-.day {
-    background-color: #FEF7FA;
-}
 
-.night {
-    background-color: #433A7B;
-}
+
 
 /* Variables */
 
@@ -79,7 +74,7 @@ $chakra-regular:'Chakra Petch', sans-serif;
     border: 1px solid #110038;
     box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
     height: 36px;
-    width: 144px;
+    width: 50%;
 }
 
 .botones-rec2 {

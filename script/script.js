@@ -3,24 +3,32 @@
 // VARIABLES
 
 var giphyAPItrend = 'https://api.giphy.com/v1/gifs/trending?api_key=zLngW6Npv5ek7URDYXee7tp7lXqHIwxu&limit=20&rating=G';
+var themeCss = document.getElementById("themeCss");
 
 // Cambiar tema light - dark mode 
 
 function day(){
-  body.className='day';
+  themeCss.href="";
   logo.src='assets/gifOF_logo.png';
+  console.log(logo.src);
+  console.log(themeCss);
 
 }
 function night(){
-  body.className='night';
+  themeCss.href="css/dark-mode.css";
   logo.src='assets/gifOF_logo_dark.png';
+  console.log(logo.src);
+  console.log(themeCss);
 }
 
 // Función para despeglar menú sugerencias
 
+
 function resultsSuggestions() {
   document.getElementById("menu-nav3").style.display = "block";
 }
+
+
 
 // Sugerencias
 
@@ -130,7 +138,69 @@ function resultsSuggestions() {
      document.getElementById("tendencias").style.display = "none";
     }
 
-    var busqueda1 = document.getElementById("busqueda1");
+  /* Función Búsqueda para menú despegable */
 
-    busqueda1.onclick = getSearchResults("leon");
+  function getSearchResultsSuggestions() {
+
+    var hidden = document.getElementById("misGuifos");
+    console.log(hidden);
+    hidden.innerHTML = '';
+  
+fetch('https://api.giphy.com/v1/gifs/search?api_key=zLngW6Npv5ek7URDYXee7tp7lXqHIwxu&q=' + n + '&limit=20&offset=0&rating=G&lang=en')
+.then(response => {
+  return response.json();
+})
+
+.then(json => {
+  console.log(json);
+  document.getElementById("texto3").innerHTML = "Resultados para: [ " + n + " ]";
+
+  for(i = 0; i < json.data.length; i++) {
+      
+      console.log(json);
+      
+
+      const divCajas = document.createElement("div");
+      divCajas.classList.add("gifs-container");
+      misGuifos.appendChild(divCajas);
+
+      const gifSubido = document.createElement("img");
+      const gifTitle = document.createElement("p");
+      gifSubido.classList.add("gif-sugerencias");
+      gifTitle.classList.add("gif-tags");
+      divCajas.appendChild(gifSubido);
+      divCajas.appendChild(gifTitle);
+
+      gifSubido.src = json.data[i].images.original.url;
+      gifTitle.innerHTML = json.data[i].title;
+  }
+
+
+return data
+})
+.catch((error) => {
+return error
+})
+
+// Tres funciones distintas para cada opción del menu desplegable del buscador
+
+  }
+
+  function getSearchResultsSuggestionsNumberOne() {
+    n = "memes";
+    getSearchResultsSuggestions();
+    console.log(n);
+  }
+
+  function getSearchResultsSuggestionsNumberTwo() {
+    n = "coding";
+    getSearchResultsSuggestions();
+    console.log(n);
+  }
+
+  function getSearchResultsSuggestionsNumberThree() {
+    n = "tomb raider";
+    getSearchResultsSuggestions();
+    console.log(n);
+  }
 

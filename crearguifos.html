@@ -7,6 +7,8 @@
         <title>gifOS</title>
         <!-- Styles -->
         <link rel="stylesheet" href="css/style.css">
+         <!-- For Light / Dark mode -->
+         <link rel="stylesheet" href="" id="themeCss">
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
     </head>
@@ -109,19 +111,22 @@
                                 Capturar
                             </button>
                         </div>
-                        <div id="recuadro5">
-                            <div class="timer texto-botones">
-                                00:17:35
+                        <div>
+                            <div class="timer texto-botones" id="timer">
+                                <div id="screen">00 : 00 : 00</div>
                             </div>
+                            <span id="recuadro5">
+                                <div class="loading2">
+                                    <div class="loading-bar2">
+                                    </div>
+                                </div>
                             <button class="botones-grabar botones-grabar-color" id="btn-stop-recording" onclick="stopRecording(); stopRecord()">
                                 <img src="assets/recording.svg" alt="recording" class="img-camera">
                                 Listo
                             </button>
+                            </span>
                         </div>
                         <div id="recuadro6">
-                            <div class="timer texto-botones">
-                                17:00:50
-                            </div>
                             <button class="botones-rec-color texto-botones botones-rec2" onclick="uploadGif()">
                                 Subir Guifo
                             </button>
@@ -143,7 +148,7 @@
                                     Tiempo restante: <span class="underlined">38 años</span> algunos minutos
                                 </p>
                             </div>
-                            <button class="texto-botones botones-rec2 botones-grabar">
+                            <button class="texto-botones botones-rec2 botones-grabar" onclick="stopRecording(); stopRecord()">
                                 Cancelar
                             </button>
                         </div>
