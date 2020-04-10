@@ -8,17 +8,12 @@ var themeCss = document.getElementById("themeCss");
 // Cambiar tema light - dark mode 
 
 function day(){
-  themeCss.href="";
   logo.src='assets/gifOF_logo.png';
-  console.log(logo.src);
-  console.log(themeCss);
-
+  themeCss.href="";
 }
 function night(){
-  themeCss.href="css/dark-mode.css";
   logo.src='assets/gifOF_logo_dark.png';
-  console.log(logo.src);
-  console.log(themeCss);
+  themeCss.href="css/dark-mode.css";
 }
 
 // Función para despeglar menú sugerencias

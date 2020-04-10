@@ -16,15 +16,10 @@ var apiKey = "zLngW6Npv5ek7URDYXee7tp7lXqHIwxu";
 function day(){
     themeCss.href="";
     logo.src='assets/gifOF_logo.png';
-    console.log(logo.src);
-    console.log(themeCss);
-  
   }
   function night(){
     themeCss.href="css/dark-mode.css";
     logo.src='assets/gifOF_logo_dark.png';
-    console.log(logo.src);
-    console.log(themeCss);
   }  
 
 
