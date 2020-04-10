@@ -3,6 +3,8 @@
 
 // Variables
 
+localStorage.clear();
+
 
 var arr = [];
 var misGuifos = document.getElementById("misGuifos");
